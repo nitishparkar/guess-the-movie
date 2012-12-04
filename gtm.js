@@ -46,6 +46,7 @@ $(document).ready(function() {
     };
 
     $('.alphabets').click(function(event) {
+        $(this).attr('disabled','disabled');
         processCharacter(event.target.id);
         if(isWon()) {
             alert("Jinklas ki re!");
@@ -55,6 +56,8 @@ $(document).ready(function() {
     });
 
     $('#give-up').click(function() {
+        $(this).attr('disabled','disabled');
+        $('.alphabets').attr('disabled','disabled');
         chances = 0;
         hidden_movie = movie;
         refreshDisplay();
