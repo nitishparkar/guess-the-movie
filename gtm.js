@@ -1,13 +1,3 @@
-/*var getMovie = function() {
-    var movie = "Blood Diamond";
-    $.get('./movies.html', function(data) {
-        $(data).find('h1').each(function() {
-            movie = $(this).text();
-        });
-    });
-    return movie;
-}*/
-
 var movie = "pursuit of happyness".split("");
 var hidden_movie = "******* ** *********".split("");
 var chances = 7;
@@ -24,9 +14,6 @@ $(document).ready(function() {
     });
     */
 
-    $('div#movie h3').html(movie.join("") + ' || ' + hidden_movie.join(""));
-    $('div#chances h1').html(chances);
-
     var refreshDisplay = function() {
         $('div#movie h3').html(movie.join("") + ' || ' + hidden_movie.join(""));
         $('div#chances h1').html(chances);
@@ -34,8 +21,6 @@ $(document).ready(function() {
 
     var useChance = function() {
         chances -= 1;
-        /*var c = parseInt($('div#chances h1').html(), 10) - 1;
-        $('div#chances h1').html(c);*/
     };
 
     var isLost = function() {
@@ -61,14 +46,24 @@ $(document).ready(function() {
     };
 
     $('.alphabets').click(function(event) {
-        //alert(event.target.id);
         processCharacter(event.target.id);
         if(isWon()) {
             alert("Jinklas ki re!");
         } else if(isLost()) {
             alert("Harlas ki re!");
         }
-        //useChance();
     });
+
+    $('#give-up').click(function() {
+        chances = 0;
+        hidden_movie = movie;
+        refreshDisplay();
+    });
+
+    $('#restart').click(function() {
+        location.reload(true);
+    });
+
+    refreshDisplay();
 
 });
