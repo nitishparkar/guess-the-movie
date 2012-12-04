@@ -4,16 +4,6 @@ var chances = 7;
 
 $(document).ready(function() {
 
-    //http://stackoverflow.com/a/1982047
-    // gets movie name from a html file
-    /*
-    $.get('./movies.html', function(data) {
-        $(data).find('h1').each(function() {
-            movie = $(this).text();
-        });
-    });
-    */
-
     $.getJSON('./movies.json', function(data) {
         $.each(data, function(key, val) {
             var mov = key.toLowerCase();
