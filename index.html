@@ -2,8 +2,47 @@
 <html>
     <head>
         <title> Guess The Movie </title>
+        <link rel="stylesheet" type="text/css" href="gtm.css" />
+        <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="gtm.js"></script>
     </head>
     <body>
-        <h1> Hello, World!</h1>
+        <div id="container">
+            <div id="display">
+                <div id="movie" class="pull-left">
+                    <h3>The Hulk</h3>
+                </div>
+                <div id="chances" class"pull-right">
+                    <h1>7</h1>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div id="keyboard">
+                <div id="top-row">
+                    <button id="q" class="alphabets">Q</button>
+                    <button id="w" class="alphabets">W</button>
+                    <button id="e" class="alphabets">E</button>
+                    <button id="r" class="alphabets">R</button>
+                    <button id="t" class="alphabets">T</button>
+                    <button id="y" class="alphabets">Y</button>
+                    <button id="u" class="alphabets">U</button>
+                    <button id="i" class="alphabets">I</button>
+                    <button id="o" class="alphabets">O</button>
+                    <button id="p" class="alphabets">P</button>
+                </div>
+                <div id="mid-row">
+                    <button id="a" class="alphabets">A</button>
+                    <button id="s" class="alphabets">S</button>
+                </div>
+                <div id="bottom-row">
+                    <button id="z" class="alphabets">Z</button>
+                    <button id="x" class="alphabets">X</button>
+                </div>
+            </div>
+            <div id="button-bar">
+            </div>
+            <div id="status-bar">
+            </div>
+        </div>
     </body>
 </html>

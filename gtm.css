@@ -1,0 +1,40 @@
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#container {
+    width: 100%;
+    margin: auto;
+    border: 1px dashed black;
+}
+
+#display {
+    width: 100%;
+    margin: auto;
+    border: 1px dashed blue;
+}
+
+#movie {
+    display: inline-block;
+    width: 75%;
+    border: 1px dashed green;
+}
+
+#chances {
+    display: inline-block;
+    width: 20%;
+    border: 1px dashed red;
+}
+
+#keyboard {
+    width: 100%;
+    margin: auto;
+}
