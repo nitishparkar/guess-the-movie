@@ -1,14 +1,23 @@
 var movie = null;
 var hidden_movie = null;
 var chances = 7;
+var MOVIES = 10;
 
 $(document).ready(function() {
 
     $.getJSON('./movies.json', function(data) {
+	    var r = Math.floor(Math.random() * (MOVIES)); // random no [0 - MOVIES)
+        
         $.each(data, function(key, val) {
-            var mov = key.toLowerCase();
-            movie = mov.split("");
-            hidden_movie = mov.replace(/[a-z]/g, "*").split("");
+            console.log(r);
+            if(r == 0) {
+                var mov = key.toLowerCase();
+                movie = mov.split("");
+                hidden_movie = mov.replace(/[a-z]/g, "*").split("");
+                // http://stackoverflow.com/questions/1784780/how-to-break-out-of-jquerys-each-loop
+                return false;   
+            }
+            r--;
         });
         refreshDisplay();
     });
