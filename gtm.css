@@ -11,30 +11,86 @@
 }
 
 #container {
-    width: 100%;
+    width: 80%;
     margin: auto;
-    border: 1px dashed black;
 }
 
 #display {
-    width: 100%;
-    margin: auto;
-    border: 1px dashed blue;
+    margin-top: 2em;
 }
 
 #movie {
     display: inline-block;
-    width: 75%;
-    border: 1px dashed green;
+    width: 89%;
+    text-align: center;
+    background-color: #AEAE9E;
+    border-radius: 1em;
 }
 
 #chances {
     display: inline-block;
-    width: 20%;
-    border: 1px dashed red;
+    width: 10%;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.green {
+    background-color: rgba(0, 255, 0, 0.85);
+}
+
+.yellow {
+    background-color: rgba(255, 255, 0, 0.85);
+}
+
+.red {
+    background-color: rgba(255, 0, 0, 0.85);
 }
 
 #keyboard {
     width: 100%;
-    margin: auto;
+    margin-top: 2em;
+    background-color: #EEEEEB;
+    border-radius: 1em;
+}
+
+.keys {
+    padding: 1em;
+    line-height: 2em;
+}
+
+.alphabets {
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+    height: 3.5em;
+    width: 4em;
+}
+
+#top-row {
+    margin-left: 2em;
+}
+
+#mid-row {
+    margin-left: 6em;
+}
+
+#bottom-row {
+    margin-left: 12em;
+}
+
+#button-bar {
+    margin-top: 2em;
+}
+
+#restart, #give-up {
+    height: 3.5em;
+    width: 6em;
+}
+
+#status-bar {
+    margin-top: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

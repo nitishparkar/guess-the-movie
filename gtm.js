@@ -19,11 +19,14 @@ $(document).ready(function() {
             }
             r--;
         });
+
+        $('#give-up').removeAttr('disabled');
+        $('.alphabets').removeAttr('disabled');
         refreshDisplay();
     });
 
     var refreshDisplay = function() {
-        $('div#movie h3').html(movie.join("") + ' || ' + hidden_movie.join(""));
+        $('div#movie h1').html(hidden_movie.join(""));
         $('div#chances h1').html(chances);
     };
 
@@ -36,6 +39,13 @@ $(document).ready(function() {
 
     var useChance = function() {
         chances -= 1;
+        if (chances < 2) {
+            $('#chances').removeClass('yellow');
+            $('#chances').addClass('red');
+        } else if (chances < 5) {
+            $('#chances').removeClass('green');
+            $('#chances').addClass('yellow');
+        }
     };
 
     var isLost = function() {
@@ -65,10 +75,10 @@ $(document).ready(function() {
         processCharacter(event.target.id);
         if(isWon()) {
             endGame();
-            alert("Jinklas ki re!");
+            alert("Congratulations!");
         } else if(isLost()) {
             endGame();
-            alert("Harlas ki re!");
+            alert("Better Luck Next Time!");
         }
     });
 
